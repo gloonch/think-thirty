@@ -1,58 +1,53 @@
-<div dir="rtl">
+# ✨ Why “30” Questions?
 
-# ✨ چرا «۳۰» سؤال؟
+### In Persian culture, the number 30 is more than just a number it symbolizes endurance, wisdom, and completeness that emerges from diversity and time:
 
-در فرهنگ ایرانی، عدد ۳۰ فقط یک عدد نیست **نماد ایستادگی، فهم، و کمالی‌ست که از دلِ تنوع و زمان بیرون آمده**:
-
-🏛️ در نقش رستم، ۳۰ قوم با پوشش‌ها و زبان‌های متفاوت در کنار آرامگاه داریوش ایستاده‌اند؛ **تمثیلی از وحدت در عین گوناگونی**.  
-📖 در کلیله و دمنه، ۳۰ حکایت آمده که ذهن پادشاهان و فرزانگان را تربیت کرده‌اند؛ **هر یک، پنجره‌ای به جهان‌بینی و سیاست**.  
-🪶 فردوسی، ۳۰ سال از عمرش را وقف شاهنامه کرد تا فرهنگی را جاودانه سازد؛ **عدد ۳۰، اینجا نشان رنجِ آگاهانه است**.  
-🕊️ سی‌مرغ، همان ۳۰ پرنده‌ای هستند که در دل سفر، خودِ حقیقی‌شان را در آینه‌ی یکدیگر یافتند؛ **سفر از دانستن به شدن**.  
-🗓️ تقویم زرتشتی با ۱۲ ماهِ ۳۰ روزه، نمادی‌ست از **نظم کیهانی و دقت علمی در تفکر کهن ایرانی**.
+**🏛️ In Naqsh-e Rostam**: 30 nations with different garments stand beside the tomb of Darius a symbol of unity in diversity.  
+**📖 In Kalila and Dimna**: 30 parables shaped the wisdom of kings and scholars each a window into politics and philosophy.  
+**🪶 Ferdowsi devoted 30 years of his life** to writing the Shahnameh the number became a sign of conscious struggle and cultural immortality.  
+**🕊️ The “Simorgh” in Persian literature** is revealed as the 30 birds themselves a metaphor for inner growth, unity, and self-realization.  
+**🗓️ The Zoroastrian calendar**: with its 12 months of 30 days, reflects cosmic order and scientific precision in ancient Iranian thought.
 
 ---
 
-# 🎯 این پروژه چیست و برای چه طراحی شده؟
+# 🎯 What is this project and why does it exist?
 
-**در جهانی پر از آموزش‌های سطحی، این پروژه دعوتی‌ست به ژرف‌اندیشی.**
+In a world filled with shallow tutorials, this project is an invitation to deep understanding.
 
-هر مبحث با **۳۰ سؤال بنیادی، مفهومی و چالش‌برانگیز** نمایندگی می‌شود. نه سؤال‌هایی پایه ای یا درباره‌ی syntax یک زبان برنامه نویسی یا تعریف متغیر، بلکه سؤال‌هایی که ما را وادار می‌کنند موارد زیر را درباره هر مطلب کاوش کنیم:
+Each topic is represented by **30 fundamental, conceptual, and discussion-worthy questions** not questions about syntax or variable types, but ones that push us to explore:
 
-- **چرا؟**
-- **کِی؟**
-- **چطور؟**
-- **و چه چیزی پشتِ این انتخاب‌هاست؟**
-
----
-
-# 🧠 هدف 
-
-این پروژه هم‌زمان:
-
-✅ یک منبع آموزشی ساخت‌یافته برای **یادگیری عمیق در کوتاه‌ترین زمان ممکن** است  
-✅ یک مرجع مفید برای **مصاحبه‌کننده‌ها و مصاحبه‌شونده‌ها**  
-✅ و در نهایت، بستری برای **گفت‌وگوی فنی، مقایسه، و انتقال تجربه**
+- Why?
+- When?
+- How?
+- And what design choices lie underneath?
 
 ---
 
-# 🌀 تفاوت ما با منابع دیگر
+# 🧠 The Goal
 
-در اینجا قرار نیست فقط «بدانی» که فلان چیز چیست قرار است **بدانی چرا هست**، **چه تفاوتی با بدیلش دارد**، و **چه تصمیماتی پشتش نهفته** است. هر سؤال، **یک گره فکری** است؛ هر پاسخ، **تحلیلی صادقانه، ساده، و روشن**.
+This project is simultaneously:
 
-و اگر کسی پاسخی بهتر یا دیدگاهی متفاوت دارد؟ **بیا و در بحث مشارکت کن.** این پروژه قرار است با ذهن‌های بسیاری کامل‌تر شود.
+✅ A structured learning resource for **deep understanding in minimal time**  
+✅ A useful reference for both **interviewers and interviewees**  
+✅ And a space for **technical dialogue, comparisons, and experience sharing**
 
 ---
 
+# 🌀 What makes this project different?
 
-## 🤝 مشارکت
+You’re not just expected to “know what something is” you’re encouraged to **understand why it exists**, **how it compares to alternatives**, and **what decisions shaped it**.  
+Each question is a **mental knot**, and each answer a **clear, honest analysis**.
 
-اگر به **یادگیری مفهومی، مصاحبه‌ حرفه‌ای، یا انتقال تجربه‌ فنی** علاقه‌مندی، این پروژه جای توست.
+If you have a better answer or a different perspective join the conversation. This project is designed to grow through many minds.
 
- می‌تونی:
-- با Pull Request، سؤالات مفهومی یا تحلیل‌هات رو اضافه کنی
-- در Discussions، دیدگاه‌ت رو به اشتراک بذاری یا بحث جدیدی باز کنی
+---
 
-💬 گاهی یک گفت‌وگوی خوب از خودِ پاسخ هم آموزنده‌تره.
+## 🤝 Contributing
 
+If you're passionate about **conceptual learning, deep interviews, or sharing technical insight**, this project is for you.
 
-</div>
+You can:
+- Submit new thoughtful questions or analyses via **Pull Request**
+- Join or start a conversation in the **Discussions tab**
+
+Sometimes, a good discussion teaches more than the answer itself.
