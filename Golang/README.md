@@ -92,4 +92,71 @@ struct ساده با مقدارهای پیش‌فرض	zero value کافی است
 struct با مقادیر بحرانی یا dependency ها	استفاده از factory function (مثل ()NewT) یا initializer
 struct با اعتبارسنجی پیچیده	از unexported fields + constructor برای کنترل ساخت استفاده کنید
 
+
+# سوال سوم
+### 3. چه زمانی استفاده از interface{} در طراحی API قابل قبول است، و چه زمانی smell حساب می‌شود؟
+   پاسخ خلاصه:
+   استفاده از interface{} در Go زمانی قابل‌قبول است که واقعاً نمی‌دانیم یا نمی‌خواهیم بدانیم نوع دقیق داده چیست — مانند serialization، logging یا generic containers. اما اگر interface{} در طراحی API به‌گونه‌ای به کار رود که وظایف تابع یا struct را مبهم کند یا نیاز به type assertion در سمت caller ایجاد کند، معمولاً به عنوان code smell شناخته می‌شود.
+
+#### تحلیل:
+- interface{} نماینده‌ی هر نوعی است — یعنی می‌تواند هر چیزی را نگه دارد. اما استفاده از آن هزینه‌هایی دارد:
+- خوانایی و type safety را کاهش می‌دهد
+- ممکن است نیاز به type assertion در سمت مصرف‌کننده ایجاد کند
+- معماری را مبهم و غیرقابل تست کند
+- موارد قابل‌قبول برای استفاده از interface{}:
+- توابعی مانند fmt.Println یا loggers که باید با هر نوعی کار کنند
+- استفاده در serialization/deserialization یا marshal/unmarshal
+- مقادیر داخل map[string]interface{} که ساختارشان در زمان کامپایل مشخص نیست (مثلاً داده‌های JSON)
+- مواردی که استفاده از interface{} smell محسوب می‌شود:
+- زمانی که می‌دانیم دقیقاً چه نوع داده‌ای انتظار داریم ولی به‌جای آن از interface{} استفاده کرده‌ایم
+- وقتی که API طراحی‌شده با interface{} نیاز دارد مصرف‌کننده با type switch یا reflect کار کند
+- وقتی می‌توانستیم به‌جای interface{} از یک interface واضح‌تر و معنی‌دار (مثلاً io.Reader) استفاده کنیم ولی نکرده‌ایم
+
+#### مثال مثبت:
+
+<div dir="ltr">
+
+```go
+type Config struct {
+	Port   int
+	Secure bool
+}
+   
+var cfg Config // cfg.Port == 0, cfg.Secure == false
+
+```
+</div>
+
+#### مثال منفی:
+
+<div dir="ltr">
+
+```go
+func Process(input interface{}) {
+// type switch for different behaviours
+   switch v := input.(type) {
+   case string:
+	   doSomethingWithString(v)
+   case int:
+	   doSomethingWithInt(v)
+   default:
+	   panic("unsupported type")
+   }
+}
+
+```
+</div>
+
+ اینجا بهتر بود API تفکیک‌شده‌ای طراحی شود یا از interface هایی با رفتار مشخص استفاده شود.
+
+#### پیشنهاد طراحی:
+
+| وضعیت                            | رویکرد بهتر                                                           |
+| -------------------------------- | --------------------------------------------------------------------- |
+| داده ناشناخته (مثلاً JSON ورودی) | `map[string]interface{}` قابل قبول است                                |
+| عملیات عمومی (مثل logger)        | استفاده از `interface{}` پذیرفته شده است                              |
+| داده با نوع مشخص                 | تعریف interface معنیدار یا استفاده از struct خاص                      |
+| نیاز به عملکرد polymorphic       | تعریف رفتار با interfaceهای محدود مثل `io.Reader` یا custom interface |
+
+
 </div>
